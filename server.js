@@ -1,12 +1,16 @@
 const Discord = require('discord.js');
 const client = new Discord.Client({disableMentions: "everyone"});
 const moment = require('moment');
+const express = require('express');
+const app = new express();
 const ayarlar = require('./ayarlar.json');
 const fs = require('fs');
 require('./util/eventLoader')(client);
 const log = message => {
   console.log(`[${moment().format('YYYY-MM-DD HH:mm:ss')}] ${message}`);
 };
+app.listen(3000, console.log("Şu port dinleniliyor: " + 3000))
+app.get('/',(req,res)=>res.send("BOT | Aktif"))
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
 fs.readdir('./komutlar/', (err, files) => {
