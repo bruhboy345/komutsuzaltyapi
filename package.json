@@ -2,9 +2,9 @@
   "name": "bot",
   "version": "2.0.0",
   "description": "bot",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node server.js"
   },
   "author": "bruhboy345",
   "license": "MIT",
