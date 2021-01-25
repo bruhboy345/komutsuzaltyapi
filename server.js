@@ -93,6 +93,5 @@ client.elevation = message => {
     return permlvl;
 };
 
-client.login(ayarlar.token)
-
+client.login(ayarlar.token).catch(()=>{console.log("Token hatalı veya discordda sorunlar yaşanıyor")})
 
